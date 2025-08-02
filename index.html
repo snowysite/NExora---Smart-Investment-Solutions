@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NExora - Smart Investment Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'nexora-orange': '#FF4500',
+                        'nexora-orange-dark': '#E03E00',
+                    }
+                }
+            }
+        }
+    </script>
+    
+</head>
+<body class="bg-black text-white font-sans">
+    <!-- Navigation -->
+    <nav class="bg-black/90 backdrop-blur-sm fixed w-full z-50 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-nexora-orange">NExora</div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="text-white hover:text-nexora-orange transition-colors">Home</a>
+                        <a href="#services" class="text-gray-300 hover:text-nexora-orange transition-colors">Services</a>
+                        <a href="#about" class="text-gray-300 hover:text-nexora-orange transition-colors">About</a>
+                        <a href="#contact" class="text-gray-300 hover:text-nexora-orange transition-colors">Contact</a>
+                    </div>
+                </div>
+                <div class="flex space-x-4">
+                    <button onclick="showLogin()" class="text-white hover:text-nexora-orange transition-colors px-4 py-2">Login</button>
+                    <button onclick="showSignup()" class="bg-nexora-orange hover:bg-nexora-orange-dark text-white px-6 py-2 rounded-lg transition-colors">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg min-h-screen flex items-center justify-center pt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                Invest in Your <span class="text-nexora-orange">Future</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                NExora provides cutting-edge investment solutions powered by AI and market expertise. Start building wealth today.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="showSignup()" class="bg-nexora-orange hover:bg-nexora-orange-dark text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
+                    Start Investing
+                </button>
+                <button class="border-2 border-nexora-orange text-nexora-orange hover:bg-nexora-orange hover:text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
+                    Learn More
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-16">Our <span class="text-nexora-orange">Services</span></h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-effect p-8 rounded-xl">
+                    <div class="text-nexora-orange text-4xl mb-4">📈</div>
+                    <h3 class="text-2xl font-bold mb-4">Portfolio Management</h3>
+                    <p class="text-gray-300">AI-driven portfolio optimization tailored to your risk tolerance and financial goals.</p>
+                </div>
+                <div class="glass-effect p-8 rounded-xl">
+                    <div class="text-nexora-orange text-4xl mb-4">💡</div>
+                    <h3 class="text-2xl font-bold mb-4">Market Analysis</h3>
+                    <p class="text-gray-300">Real-time market insights and predictive analytics to guide your investment decisions.</p>
+                </div>
+                <div class="glass-effect p-8 rounded-xl">
+                    <div class="text-nexora-orange text-4xl mb-4">🎯</div>
+                    <h3 class="text-2xl font-bold mb-4">Goal Planning</h3>
+                    <p class="text-gray-300">Personalized investment strategies to help you achieve your financial milestones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold mb-6">Why Choose <span class="text-nexora-orange">NExora</span>?</h2>
+                    <p class="text-gray-300 text-lg mb-6">
+                        With over a decade of experience in financial markets and cutting-edge technology, NExora combines human expertise with AI precision to deliver superior investment outcomes.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center">
+                            <span class="text-nexora-orange mr-3">✓</span>
+                            <span>SEC-regulated and fully compliant</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-nexora-orange mr-3">✓</span>
+                            <span>24/7 customer support</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-nexora-orange mr-3">✓</span>
+                            <span>Low fees and transparent pricing</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-nexora-orange mr-3">✓</span>
+                            <span>Advanced security measures</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="glass-effect p-8 rounded-xl">
+                    <h3 class="text-2xl font-bold mb-6 text-center">Performance Stats</h3>
+                    <div class="space-y-6">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-nexora-orange">12.4%</div>
+                            <div class="text-gray-300">Average Annual Return</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-nexora-orange">$2.5B+</div>
+                            <div class="text-gray-300">Assets Under Management</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-nexora-orange">50K+</div>
+                            <div class="text-gray-300">Active Investors</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-8">Ready to Start <span class="text-nexora-orange">Investing</span>?</h2>
+            <p class="text-xl text-gray-300 mb-8">Join thousands of investors who trust NExora with their financial future.</p>
+            <button onclick="showSignup()" class="bg-nexora-orange hover:bg-nexora-orange-dark text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
+                Get Started Today
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-gray-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-2xl font-bold text-nexora-orange mb-4">NExora</div>
+                    <p class="text-gray-400">Smart investment solutions for the modern investor.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-nexora-orange transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-nexora-orange transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-nexora-orange transition-colors">Press</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-nexora-orange transition-colors">Help Center</a></li>
+                        <li><a href="#" class="hover:text-nexora-orange transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-nexora-orange transition-colors">Security</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-nexora-orange transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-nexora-orange transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-nexora-orange transition-colors">Disclosures</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 NExora. All rights reserved. Investment products are not FDIC insured and may lose value.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="glass-effect rounded-xl p-8 w-full max-w-md">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold">Login to <span class="text-nexora-orange">NExora</span></h2>
+                <button onclick="closeModal()" class="text-gray-400 hover:text-white text-2xl">&times;</button>
+            </div>
+            <form onsubmit="handleLogin(event)">
+                <div class="mb-4">
+                    <label class="block text-sm font-medium mb-2">Email</label>
+                    <input type="email" required class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:border-nexora-orange focus:outline-none text-white">
+                </div>
+                <div class="mb-6">
+                    <label class="block text-sm font-medium mb-2">Password</label>
+                    <input type="password" required class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:border-nexora-orange focus:outline-none text-white">
+                </div>
+                <button type="submit" class="w-full bg-nexora-orange hover:bg-nexora-orange-dark text-white py-3 rounded-lg font-semibold transition-colors mb-4">
+                    Login
+                </button>
+                <div class="text-center">
+                    <span class="text-gray-400">Don't have an account? </span>
+                    <button type="button" onclick="switchToSignup()" class="text-nexora-orange hover:underline">Sign up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signupModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="glass-effect rounded-xl p-8 w-full max-w-md">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold">Join <span class="text-nexora-orange">NExora</span></h2>
+                <button onclick="closeModal()" class="text-gray-400 hover:text-white text-2xl">&times;</button>
+            </div>
+            <form onsubmit="handleSignup(event)">
+                <div class="mb-4">
+                    <label class="block text-sm font-medium mb-2">Full Name</label>
+                    <input type="text" required class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:border-nexora-orange focus:outline-none text-white">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-sm font-medium mb-2">Email</label>
+                    <input type="email" required class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:border-nexora-orange focus:outline-none text-white">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-sm font-medium mb-2">Password</label>
+                    <input type="password" required class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:border-nexora-orange focus:outline-none text-white">
+                </div>
+                <div class="mb-6">
+                    <label class="block text-sm font-medium mb-2">Confirm Password</label>
+                    <input type="password" required class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:border-nexora-orange focus:outline-none text-white">
+                </div>
+                <div class="mb-6">
+                    <label class="flex items-center">
+                        <input type="checkbox" required class="mr-2 accent-nexora-orange">
+                        <span class="text-sm text-gray-300">I agree to the Terms of Service and Privacy Policy</span>
+                    </label>
+                </div>
+                <button type="submit" class="w-full bg-nexora-orange hover:bg-nexora-orange-dark text-white py-3 rounded-lg font-semibold transition-colors mb-4">
+                    Create Account
+                </button>
+                <div class="text-center">
+                    <span class="text-gray-400">Already have an account? </span>
+                    <button type="button" onclick="switchToLogin()" class="text-nexora-orange hover:underline">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Message -->
+    <div id="successMessage" class="fixed top-4 right-4 bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg z-50 hidden">
+        <div class="flex items-center">
+            <span class="mr-2">✓</span>
+            <span id="successText">Success!</span>
+        </div>
+    </div>
+
+    <!-- Investment Dashboard -->
+    <div id="dashboard" class="hidden">
+        <!-- Dashboard Navigation -->
+        <nav class="bg-black/90 backdrop-blur-sm fixed w-full z-50 border-b border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <div class="flex items-center">
+                        <div class="text-2xl font-bold text-nexora-orange">NExora</div>
+                        <span class="ml-4 text-gray-400">Dashboard</span>
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-8">
+                            <a href="#" class="text-white hover:text-nexora-orange transition-colors">Portfolio</a>
+                            <a href="#" class="text-gray-300 hover:text-nexora-orange transition-colors">Invest</a>
+                            <a href="#" class="text-gray-300 hover:text-nexora-orange transition-colors">History</a>
+                            <a href="#" class="text-gray-300 hover:text-nexora-orange transition-colors">Reports</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <span class="text-gray-300">Welcome, John</span>
+                        <button onclick="logout()" class="text-nexora-orange hover:text-nexora-orange-dark transition-colors">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Dashboard Content -->
+        <div class="bg-black min-h-screen pt-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <!-- Portfolio Overview -->
+                <div class="grid md:grid-cols-4 gap-6 mb-8">
+                    <div class="glass-effect p-6 rounded-xl">
+                        <h3 class="text-sm text-gray-400 mb-2">Total Portfolio Value</h3>
+                        <div class="text-3xl font-bold text-white">$24,567.89</div>
+                        <div class="text-green-400 text-sm mt-1">+12.4% this month</div>
+                    </div>
+                    <div class="glass-effect p-6 rounded-xl">
+                        <h3 class="text-sm text-gray-400 mb-2">Available Cash</h3>
+                        <div class="text-3xl font-bold text-white">$5,432.10</div>
+                        <div class="text-gray-400 text-sm mt-1">Ready to invest</div>
+                    </div>
+                    <div class="glass-effect p-6 rounded-xl">
+                        <h3 class="text-sm text-gray-400 mb-2">Total Gain/Loss</h3>
+                        <div class="text-3xl font-bold text-green-400">+$2,847.32</div>
+                        <div class="text-green-400 text-sm mt-1">+13.1% all time</div>
+                    </div>
+                    <div class="glass-effect p-6 rounded-xl">
+                        <h3 class="text-sm text-gray-400 mb-2">Active Investments</h3>
+                        <div class="text-3xl font-bold text-white">12</div>
+                        <div class="text-gray-400 text-sm mt-1">Across 8 sectors</div>
+                    </div>
+                </div>
+
+                <!-- Investment Options -->
+                <div class="grid lg:grid-cols-3 gap-8">
+                    <!-- Investment Categories -->
+                    <div class="lg:col-span-2">
+                        <h2 class="text-2xl font-bold mb-6">Investment <span class="text-nexora-orange">Opportunities</span></h2>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <!-- Stock Investment -->
+                            <div class="glass-effect p-6 rounded-xl">
+                                <div class="flex items-center justify-between mb-4">
+                                    <h3 class="text-xl font-bold">📈 Stocks</h3>
+                                    <span class="text-green-400 text-sm">+8.2% avg</span>
+                                </div>
+                                <p class="text-gray-300 mb-4">Invest in individual stocks or diversified portfolios</p>
+                                <div class="space-y-2 mb-4">
+                                    <div class="flex justify-between text-sm">
+                                        <span>AAPL</span>
+                                        <span class="text-green-400">+2.1%</span>
+                                    </div>
+                                    <div class="flex justify-between text-sm">
+                                        <span>MSFT</span>
+                                        <span class="text-green-400">+1.8%</span>
+                                    </div>
+                                    <div class="flex justify-between text-sm">
+                                        <span>GOOGL</span>
+                                        <span class="text-red-400">-0.5%</span>
+                                    </div>
+                                </div>
+                                <button onclick="showInvestModal('stocks')" class="w-full bg-nexora-orange hover:bg-nexora-orange-dark text-white py-2 rounded-lg transition-colors">
+                                    Invest in Stocks
+                                </button>
+                            </div>
+
+                            <!-- ETF Investment -->
+                            <div class="glass-effect p-6 rounded-xl">
+                                <div class="flex items-center justify-between mb-4">
+                                    <h3 class="text-xl font-bold">🏢 ETFs</h3>
+                                    <span class="text-green-400 text-sm">+6.7% avg</span>
+                                </div>
+                                <p class="text-gray-300 mb-4">Diversified exchange-traded funds for balanced growth</p>
+                                <div class="space-y-2 mb-4">
+                                    <div class="flex justify-between text-sm">
+                                        <span>SPY</span>
+                                        <span class="text-green-400">+1.2%</span>
+                                    </div>
+                                    <div class="flex justify-between text-sm">
+                                        <span>QQQ</span>
+                                        <span class="text-green-400">+2.3%</span>
+                                    </div>
+                                    <div class="flex justify-between text-sm">
+                                        <span>VTI</span>
+                                        <span class="text-green-400">+1.1%</span>
+                                    </div>
+                                </div>
+                                <button onclick="showInvestModal('etfs')" class="w-full bg-nexora-orange hover:bg-nexora-orange-dark text-white py-2 rounded-lg transition-colors">
+                                    Invest in ETFs
+                                </button>
+                            </div>
+
+                            <!-- Crypto Investment -->
+                            <div class="glass-effect p-6 rounded-xl">
+                                <div class="flex items-center justify-between mb-4">
+                                    <h3 class="text-xl font-bold">₿ Crypto</h3>
+                                    <span class="text-yellow-400 text-sm">High Risk</span>
+                                </div>
+                                <p class="text-gray-300 mb-4">Digital currencies with high growth potential</p>
+                                <div class="space-y-2 mb-4">
+                                    <div class="flex justify-between text-sm">
+                                        <span>BTC</span>
+                                        <span class="text-green-400">+3.4%</span>
+                                    </div>
+                                    <div class="flex justify-between text-sm">
+                                        <span>ETH</span>
+                                        <span class="text-green-400">+5.2%</span>
+                                    </div>
+                                    <div class="flex justify-between text-sm">
+                                        <span>ADA</span>
+                                        <span class="text-red-400">-1.8%</span>
+                                    </div>
+                                </div>
+                                <button onclick="showInvestModal('crypto')" class="w-full bg-nexora-orange hover:bg-nexora-orange-dark text-white py-2 rounded-lg transition-colors">
+                                    Invest in Crypto
+                                </button>
+                            </div>
+
+                            <!-- Bonds Investment -->
+                            <div class="glass-effect p-6 rounded-xl">
+                                <div class="flex items-center justify-between mb-4">
+                                    <h3 class="text-xl font-bold">🏛️ Bonds</h3>
+                                    <span class="text-blue-400 text-sm">Low Risk</span>
+                                </div>
+                                <p class="text-gray-300 mb-4">Stable income through government and corporate bonds</p>
+                                <div class="space-y-2 mb-4">
+                                    <div class="flex justify-between text-sm">
+                                        <span>US Treasury</span>
+                                        <span class="text-green-400">+0.8%</span>
+                                    </div>
+                                    <div class="flex justify-between text-sm">
+                                        <span>Corporate</span>
+                                        <span class="text-green-400">+1.2%</span>
+                                    </div>
+                                    <div class="flex justify-between text-sm">
+                                        <span>Municipal</span>
+                                        <span class="text-green-400">+0.9%</span>
+                                    </div>
+                                </div>
+                                <button onclick="showInvestModal('bonds')" class="w-full bg-nexora-orange hover:bg-nexora-orange-dark text-white py-2 rounded-lg transition-colors">
+                                    Invest in Bonds
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Actions & Portfolio -->
+                    <div class="space-y-6">
+                        <!-- Quick Actions -->
+                        <div class="glass-effect p-6 rounded-xl">
+                            <h3 class="text-xl font-bold mb-4">Quick Actions</h3>
+                            <div class="space-y-3">
+                                <button onclick="showDepositModal()" class="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg transition-colors">
+                                    💰 Deposit Funds
+                                </button>
+                                <button onclick="showWithdrawModal()" class="w-full bg-gray-600 hover:bg-gray-700 text-white py-3 rounded-lg transition-colors">
+                                    💸 Withdraw Funds
+                                </button>
+                                <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg transition-colors">
+                                    📊 View Reports
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Current Holdings -->
+                        <div class="glass-effect p-6 rounded-xl">
+                            <h3 class="text-xl font-bold mb-4">Top Holdings</h3>
+                            <div class="space-y-4">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <div class="font-semibold">AAPL</div>
+                                        <div class="text-sm text-gray-400">25 shares</div>
+                                    </div>
+                                    <div class="text-right">
+                                        <div class="font-semibold">$4,250</div>
+                                        <div class="text-green-400 text-sm">+2.1%</div>
+                                    </div>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <div class="font-semibold">SPY ETF</div>
+                                        <div class="text-sm text-gray-400">50 shares</div>
+                                    </div>
+                                    <div class="text-right">
+                                        <div class="font-semibold">$8,150</div>
+                                        <div class="text-green-400 text-sm">+1.2%</div>
+                                    </div>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <div class="font-semibold">BTC</div>
+                                        <div class="text-sm text-gray-400">0.25 coins</div>
+                                    </div>
+                                    <div class="text-right">
+                                        <div class="font-semibold">$12,167</div>
+                                        <div class="text-green-400 text-sm">+3.4%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- AI Recommendations -->
+                        <div class="glass-effect p-6 rounded-xl">
+                            <h3 class="text-xl font-bold mb-4">🤖 AI Recommendations</h3>
+                            <div class="space-y-3">
+                                <div class="p-3 bg-nexora-orange/20 rounded-lg border border-nexora-orange/30">
+                                    <div class="font-semibold text-sm">Rebalance Portfolio</div>
+                                    <div class="text-xs text-gray-300 mt-1">Consider reducing crypto exposure by 5%</div>
+                                </div>
+                                <div class="p-3 bg-green-600/20 rounded-lg border border-green-600/30">
+                                    <div class="font-semibold text-sm">Buy Opportunity</div>
+                                    <div class="text-xs text-gray-300 mt-1">MSFT showing strong momentum</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Investment Modal -->
+    <div id="investModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="glass-effect rounded-xl p-8 w-full max-w-md">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold">Invest in <span id="investType" class="text-nexora-orange">Stocks</span></h2>
+                <button onclick="closeInvestModal()" class="text-gray-400 hover:text-white text-2xl">&times;</button>
+            </div>
+            <form onsubmit="handleInvestment(event)">
+                <div class="mb-4">
+                    <label class="block text-sm font-medium mb-2">Select Asset</label>
+                    <select id="assetSelect" class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:border-nexora-orange focus:outline-none text-white">
+                        <option value="AAPL">Apple Inc. (AAPL)</option>
+                        <option value="MSFT">Microsoft Corp. (MSFT)</option>
+                        <option value="GOOGL">Alphabet Inc. (GOOGL)</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-sm font-medium mb-2">Investment Amount</label>
+                    <div class="relative">
+                        <span class="absolute left-3 top-3 text-gray-400">$</span>
+                        <input type="number" min="1" max="5432" step="0.01" required class="w-full pl-8 pr-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:border-nexora-orange focus:outline-none text-white">
+                    </div>
+                    <div class="text-sm text-gray-400 mt-1">Available: $5,432.10</div>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-sm font-medium mb-2">Order Type</label>
+                    <select class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:border-nexora-orange focus:outline-none text-white">
+                        <option value="market">Market Order</option>
+                        <option value="limit">Limit Order</option>
+                    </select>
+                </div>
+                <div class="mb-6 p-4 bg-gray-800/50 rounded-lg">
+                    <div class="flex justify-between text-sm mb-2">
+                        <span>Estimated Shares:</span>
+                        <span id="estimatedShares">0</span>
+                    </div>
+                    <div class="flex justify-between text-sm mb-2">
+                        <span>Trading Fee:</span>
+                        <span>$0.00</span>
+                    </div>
+                    <div class="flex justify-between font-semibold border-t border-gray-600 pt-2">
+                        <span>Total Cost:</span>
+                        <span id="totalCost">$0.00</span>
+                    </div>
+                </div>
+                <button type="submit" class="w-full bg-nexora-orange hover:bg-nexora-orange-dark text-white py-3 rounded-lg font-semibold transition-colors">
+                    Place Order
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Deposit Modal -->
+    <div id="depositModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="glass-effect rounded-xl p-8 w-full max-w-md">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold">Deposit <span class="text-nexora-orange">Funds</span></h2>
+                <button onclick="closeDepositModal()" class="text-gray-400 hover:text-white text-2xl">&times;</button>
+            </div>
+            <form onsubmit="handleDeposit(event)">
+                <div class="mb-4">
+                    <label class="block text-sm font-medium mb-2">Deposit Method</label>
+                    <select class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:border-nexora-orange focus:outline-none text-white">
+                        <option value="bank">Bank Transfer</option>
+                        <option value="card">Debit Card</option>
+                        <option value="wire">Wire Transfer</option>
+                    </select>
+                </div>
+                <div class="mb-6">
+                    <label class="block text-sm font-medium mb-2">Amount</label>
+                    <div class="relative">
+                        <span class="absolute left-3 top-3 text-gray-400">$</span>
+                        <input type="number" min="10" step="0.01" required class="w-full pl-8 pr-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:border-nexora-orange focus:outline-none text-white">
+                    </div>
+                    <div class="text-sm text-gray-400 mt-1">Minimum deposit: $10.00</div>
+                </div>
+                <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition-colors">
+                    Deposit Funds
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function showLogin() {
+            document.getElementById('loginModal').classList.remove('hidden');
+            document.getElementById('signupModal').classList.add('hidden');
+        }
+
+        function showSignup() {
+            document.getElementById('signupModal').classList.remove('hidden');
+            document.getElementById('loginModal').classList.add('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('loginModal').classList.add('hidden');
+            document.getElementById('signupModal').classList.add('hidden');
+        }
+
+        function switchToSignup() {
+            document.getElementById('loginModal').classList.add('hidden');
+            document.getElementById('signupModal').classList.remove('hidden');
+        }
+
+        function switchToLogin() {
+            document.getElementById('signupModal').classList.add('hidden');
+            document.getElementById('loginModal').classList.remove('hidden');
+        }
+
+        function showSuccess(message) {
+            document.getElementById('successText').textContent = message;
+            document.getElementById('successMessage').classList.remove('hidden');
+            setTimeout(() => {
+                document.getElementById('successMessage').classList.add('hidden');
+            }, 3000);
+        }
+
+        function handleLogin(event) {
+            event.preventDefault();
+            closeModal();
+            showSuccess('Welcome back to NExora!');
+            setTimeout(() => {
+                showDashboard();
+            }, 1500);
+        }
+
+        function handleSignup(event) {
+            event.preventDefault();
+            const password = event.target.querySelector('input[type="password"]').value;
+            const confirmPassword = event.target.querySelectorAll('input[type="password"]')[1].value;
+            
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+                return;
+            }
+            
+            closeModal();
+            showSuccess('Account created successfully! Welcome to NExora!');
+            setTimeout(() => {
+                showDashboard();
+            }, 1500);
+        }
+
+        function showDashboard() {
+            // Hide main website
+            document.querySelector('body > nav').style.display = 'none';
+            document.querySelector('#home').style.display = 'none';
+            document.querySelector('#services').style.display = 'none';
+            document.querySelector('#about').style.display = 'none';
+            document.querySelector('#contact').style.display = 'none';
+            document.querySelector('footer').style.display = 'none';
+            
+            // Show dashboard
+            document.getElementById('dashboard').classList.remove('hidden');
+        }
+
+        function logout() {
+            // Show main website
+            document.querySelector('body > nav').style.display = 'block';
+            document.querySelector('#home').style.display = 'block';
+            document.querySelector('#services').style.display = 'block';
+            document.querySelector('#about').style.display = 'block';
+            document.querySelector('#contact').style.display = 'block';
+            document.querySelector('footer').style.display = 'block';
+            
+            // Hide dashboard
+            document.getElementById('dashboard').classList.add('hidden');
+            showSuccess('Logged out successfully!');
+        }
+
+        function showInvestModal(type) {
+            document.getElementById('investType').textContent = type.charAt(0).toUpperCase() + type.slice(1);
+            
+            // Update asset options based on type
+            const assetSelect = document.getElementById('assetSelect');
+            assetSelect.innerHTML = '';
+            
+            if (type === 'stocks') {
+                assetSelect.innerHTML = `
+                    <option value="AAPL">Apple Inc. (AAPL) - $170.50</option>
+                    <option value="MSFT">Microsoft Corp. (MSFT) - $415.20</option>
+                    <option value="GOOGL">Alphabet Inc. (GOOGL) - $142.80</option>
+                    <option value="TSLA">Tesla Inc. (TSLA) - $248.90</option>
+                `;
+            } else if (type === 'etfs') {
+                assetSelect.innerHTML = `
+                    <option value="SPY">SPDR S&P 500 ETF (SPY) - $485.30</option>
+                    <option value="QQQ">Invesco QQQ Trust (QQQ) - $395.60</option>
+                    <option value="VTI">Vanguard Total Stock (VTI) - $245.80</option>
+                    <option value="IWM">iShares Russell 2000 (IWM) - $198.40</option>
+                `;
+            } else if (type === 'crypto') {
+                assetSelect.innerHTML = `
+                    <option value="BTC">Bitcoin (BTC) - $48,650.00</option>
+                    <option value="ETH">Ethereum (ETH) - $3,240.50</option>
+                    <option value="ADA">Cardano (ADA) - $0.58</option>
+                    <option value="SOL">Solana (SOL) - $105.20</option>
+                `;
+            } else if (type === 'bonds') {
+                assetSelect.innerHTML = `
+                    <option value="TLT">20+ Year Treasury Bond (TLT) - $95.40</option>
+                    <option value="AGG">Core US Aggregate Bond (AGG) - $102.80</option>
+                    <option value="LQD">Investment Grade Corp Bond (LQD) - $115.60</option>
+                    <option value="HYG">High Yield Corporate Bond (HYG) - $78.90</option>
+                `;
+            }
+            
+            document.getElementById('investModal').classList.remove('hidden');
+        }
+
+        function closeInvestModal() {
+            document.getElementById('investModal').classList.add('hidden');
+        }
+
+        function showDepositModal() {
+            document.getElementById('depositModal').classList.remove('hidden');
+        }
+
+        function closeDepositModal() {
+            document.getElementById('depositModal').classList.add('hidden');
+        }
+
+        function handleInvestment(event) {
+            event.preventDefault();
+            const asset = document.getElementById('assetSelect').value;
+            const amount = event.target.querySelector('input[type="number"]').value;
+            
+            closeInvestModal();
+            showSuccess(`Investment of $${amount} in ${asset} placed successfully!`);
+            
+            // Update available cash (demo)
+            setTimeout(() => {
+                const cashElement = document.querySelector('.glass-effect p-6 rounded-xl:nth-child(2) .text-3xl');
+                if (cashElement) {
+                    const currentCash = parseFloat(cashElement.textContent.replace('$', '').replace(',', ''));
+                    const newCash = currentCash - parseFloat(amount);
+                    cashElement.textContent = `$${newCash.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+                }
+            }, 1000);
+        }
+
+        function handleDeposit(event) {
+            event.preventDefault();
+            const amount = event.target.querySelector('input[type="number"]').value;
+            
+            closeDepositModal();
+            showSuccess(`Deposit of $${amount} initiated successfully!`);
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Close modal when clicking outside
+        document.getElementById('loginModal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
+
+        document.getElementById('signupModal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'968c847032e0657d',t:'MTc1NDEyNjYxNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
